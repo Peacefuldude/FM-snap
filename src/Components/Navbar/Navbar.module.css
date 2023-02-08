@@ -1,0 +1,304 @@
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav svg {
+    margin-right: 2%;
+}
+
+.navbar_left {
+    flex-grow: 1;
+}
+
+.navbar_right {
+    width: 12%;
+}
+
+.dropdown_div {
+    margin: 0 2%;
+}
+
+.dropdown_div a svg {
+    margin: 0 10% 0 0;
+}
+
+.btn_nav {
+    font-size: 16px;
+    color: var(--text_grey);
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    background-color: transparent;
+    justify-content: center;
+    outline: 0;
+    padding: 0;
+    border: none;
+    margin: 0 2%;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all .2s ease-in;
+}
+
+.btn_nav:hover {
+    transition: all 100ms ease-in;
+    color: var(--text_black);
+}
+
+.btn_reg {
+    font-size: 16px;
+    color: var(--text_grey);
+    padding: 5% 10%;
+    margin: 0 0 0 5%;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--bg_blue);
+    outline: none;
+    background: transparent;
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+   
+.btn_reg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg_blue);
+    z-index: -1;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+   
+.btn_reg:hover::before {
+    width: 100%;
+}
+   
+.btn_reg:hover {
+    color: var(--bg_white);
+}
+
+/* Drop Down Styles Goes here */
+.dropdown_div a {
+    display: block;
+    margin: 20% 0;
+    text-decoration: none;
+    color: var(--text_grey);
+}
+
+.dropdown_content_div {
+    display: none;
+    position: absolute;
+    min-width: 6rem;
+    top: 10%;
+    z-index: 1;
+    background-color: var(--bg_white);
+    box-shadow:  9px 9px 60px #22222266, -9px -9px 57px #ffffff;
+    border-radius: 15px;
+    padding: 0 2%;
+}
+
+.dropdown_div:hover .dropdown_content_div {
+    display: block;
+}
+
+/* Hamburger menu styles */
+.HanMenu {
+    display: none;
+}
+
+.ham_options {
+    width: 40%;
+    height: 100vh;
+    right: 0%;
+    top: 10%;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--bg_white);
+    transition: all 500ms ease-in;
+}
+
+.ham_options_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -60%;
+}
+
+.ham_options_off {
+    height: 100vh;
+    position: absolute;
+    right: -100%;
+    top: 10%;
+    transition: all 500ms ease-in;
+}
+
+.dropdown_div_ham {
+    margin: 5% 2%;
+}
+
+.btn_nav_ham {
+    font-size: 20px;
+    color: var(--text_grey);
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    justify-content: center;
+    outline: 0;
+    padding: 0;
+    border: none;
+    margin: 5% 2%;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all .2s ease-in;
+}
+
+.btn_nav_ham:hover {
+    transition: all 100ms ease-in;
+    color: var(--text_black);
+}
+
+.btn_reg_ham {
+    display: block;
+    font-size: 18px;
+    color: var(--text_grey);
+    padding: 5% 25%;
+    margin: 0 0 0 5%;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--bg_blue);
+    outline: none;
+    background: transparent;
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+   
+.btn_reg_ham::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg_blue);
+    z-index: -1;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+   
+.btn_reg_ham:hover::before {
+    width: 100%;
+}
+   
+.btn_reg_ham:hover {
+    color: var(--bg_white);
+}
+
+/* Drop Down Styles for Ham Menu */
+.dropdown_div_ham {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown_div_ham a {
+    display: block;
+    margin: 20% 0;
+    text-decoration: none;
+    color: var(--text_grey);
+}
+
+.dropdown_content_div_ham {
+    display: none;
+    /* position: absolute; */
+    right: 60%;
+    top: 10%;
+    min-width: 6rem;
+    z-index: 1;
+    background-color: var(--bg_white);
+    border-radius: 15px;
+    padding: 0 10%;
+}
+
+.dropdown_div_ham:hover .dropdown_content_div_ham {
+    display: block;
+}
+
+
+@media (max-width: 950px) {
+
+    .HanMenu {
+        width: 7%;
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+    }
+    
+    .ham_btn {
+        width: 100%;
+        height: 3px;
+        margin-bottom: 10px;
+        background-color: var(--text_grey);
+    }
+
+    .dropdown_div {
+        display: none;
+    }
+
+    .btn_nav {
+        display: none;
+    }
+
+    .btn_reg {
+        display: none;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .ham_options {
+        width: 50%;
+        height: 100vh;
+        top: 0;
+    }
+
+    .ham_options_div {
+        margin-top: -20%;
+    }   
+
+}
+
+@media (max-width: 550px) {
+
+    .HanMenu {
+        width: 12%;
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+    }
+
+    .ham_options {
+        width: 70%;
+    }
+
+    .ham_options_div {
+        margin-top: 0%;
+    }   
+}
